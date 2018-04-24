@@ -1,0 +1,3 @@
+matlibplot
+numpy
+plotly
