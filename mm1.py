@@ -143,8 +143,7 @@ class MM1(object):
         _table.append_row([max_requests, _seed_mi, _seed_lambda, round(simulation_total_time,2),
             avg_queue_length, avg_utilization])
 
-        # Descomente para visualizar graficos de geracao de valores randomicos
-        # seguindo distribuicao exponencial e o grafico de ocupacao da fila
+        # Uncomment to plot random exponential variables graph and queue graph
         # self.plot_queue_audit(queue_audit, 0)
         # self.plot_result_array(rng1.audit(), 1, title="RNG1 Plot")
         # self.plot_result_array(rng2.audit(), 2, title="RNG2 Plot", block=True)
@@ -158,7 +157,7 @@ def main():
     mi_A=1
     lambda_S=1/0.9
 
-    # Rodando a simulacao com os mesmos valores que os utilizados nos slides
+    # Running simulation with same values as the ones used in the slides
     mm1.run_simulation(mi_A, lambda_S, 10, _seed_mi=17, _seed_lambda=23, _table=table)
     mm1.run_simulation(mi_A, lambda_S, 100, _seed_mi=17, _seed_lambda=23, _table=table)
     mm1.run_simulation(mi_A, lambda_S, 1000, _seed_mi=17, _seed_lambda=23, _table=table)
