@@ -16,7 +16,10 @@ class Task(object):
         self.simulation_time = simulation_time
 
     def get_time(self):
-        return self.simulation_tim
+        return self.simulation_time
+
+    def __repr__(self):
+        return ("Task created at %s" % self.simulation_time)
 
 
 class NumberGen(object):
